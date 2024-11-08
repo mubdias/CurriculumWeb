@@ -37,13 +37,13 @@ public class CurriculumController : Controller
             {
                 new Education
                 {
-                    Course = "Engenharia de Software",
-                    Institution = "Universidade XYZ",
-                    DurationBegin = "01/2020",
-                    DurationEnd = "12/2024"
+                    Course = "Ciências da Computação",
+                    Institution = "Universidade São Judas Tadeu",
+                    DurationBegin = "02/2022",
+                    DurationEnd = "12/2026"
                 }
             },
-            Project = new List<Projects>() // Se você tiver projetos, inicialize também
+            Project = new List<Projects>()
             {
                 new Projects
                 {

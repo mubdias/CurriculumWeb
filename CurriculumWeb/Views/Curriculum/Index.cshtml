@@ -4,47 +4,55 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>@Model.Name - @Model.Title</h1>
+@section Header
+{
+    <h1>@Model.Name - @Model.Title</h1>
+}
 
-<h2>Habilidades</h2>
-<ul>
-    @foreach (var skill in Model.Skills)
-    {
-        <li>@skill</li>
-    } 
-</ul>
+    <h2>Habilidades</h2>
+    <ul>
+        @foreach (var skill in Model.Skills)
+        {
+            <li>@skill</li>
+        } 
+    </ul>
 
-<h2>Experiência</h2>
-<ul>
-    @foreach (var experience in Model.Experiences)
-    {
-        <li>
-            <h3>@experience.Position - @experience.Company</h3>
-            <p>@experience.DurationBegin - @experience.DurationEnd | @experience.Location</p>
-            <p>@experience.Description</p>
-        </li> 
-    }
-</ul>
+    <h2>Experiência</h2>
+    <ul>
+        @foreach (var experience in Model.Experiences)
+        {
+            <li>
+                <h3>@experience.Position - @experience.Company</h3>
+                <p>@experience.DurationBegin - @experience.DurationEnd | @experience.Location</p>
+                <p>@experience.Description</p>
+            </li> 
+        }
+    </ul>
 
-<h2>Formação</h2>
-<ul>
-    @foreach (var education in Model.Educations)
-    {
-        <li>
-            <h3>@education.Course - @education.Institution</h3>
-            <p>@education.DurationBegin - @education.DurationEnd</p>
-        </li>
-    }
-</ul>
+    <h2>Formação</h2>
+    <ul>
+        @foreach (var education in Model.Educations)
+        {
+            <li>
+                <h3>@education.Course - @education.Institution</h3>
+                <p>@education.DurationBegin - @education.DurationEnd</p>
+            </li>
+        }
+    </ul>
 
-<h2>Projetos</h2>
-<ul>
-    @foreach (var project in Model.Project)
-    {
-        <li>
-            <h3>@project.Title</h3>
-            <p>@project.DurationBegin - @project.DurationEnd</p>
-            <p>@project.Description</p>
-        </li>
-    }
-</ul>
+    <h2>Projetos</h2>
+    <ul>
+        @foreach (var project in Model.Project)
+        {
+            <li>
+                <h3>@project.Title</h3>
+                <p>@project.DurationBegin - @project.DurationEnd</p>
+                <p>@project.Description</p>
+            </li>
+        }
+    </ul>
+
+@section Footer
+{
+    <partial name="Privacy">
+}
