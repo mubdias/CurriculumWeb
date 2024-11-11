@@ -16,13 +16,18 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CurriculumWeb.styles.css" asp-append-version="true" />
 </head>
-    <body>
+
+<body class="index-page">
         <header id="header" class="header d-flex align-items-center fixed-top">
             @RenderSection("Header")
         </header>
-        <main>
+
+        <main class="main">
             @RenderBody()
         </main>
+
+        <footer id="footer" class="footer position-relative dark-background">
             @RenderSection("Footer")
+        </footer>
     </body>  
 </html>
