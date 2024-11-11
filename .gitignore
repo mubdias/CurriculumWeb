@@ -1,0 +1,9 @@
+appsettings.Development.json
+appsettings.Production.json
+bin/
+obj/
+.vs/
+node_modules/
+wwwroot/lib/
+logs/
+temp/
