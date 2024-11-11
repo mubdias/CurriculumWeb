@@ -25,7 +25,7 @@ public class CurriculumController : Controller
                 },
                 new Experience
                 {
-                    Position = "Desenvolvedor de Software",
+                    Position = "Desenvolvedor Web",
                     Company = "Pazzini Serviços de Informática",
                     DurationBegin = "08/2022",
                     DurationEnd = "08/2023",
@@ -60,7 +60,7 @@ public class CurriculumController : Controller
                 new Projects
                 {
                     Title = "Currículo Online",
-                    Description = "Neste projeto o intuítuo foi desenvolver meu currículo profissional em uma página web utilizando ASP.NET Core com Blazor, Bootstrap e Javascript."
+                    Description = "Neste projeto o intuítuo foi desenvolver meu currículo profissional em uma página web utilizando ASP.NET, Bootstrap e Javascript."
                 }
 
             }

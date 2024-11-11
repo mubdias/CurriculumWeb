@@ -868,6 +868,11 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+.resume-item ul {
+  list-style: none;
+  padding-left: 0rem;
+}
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
