@@ -10,13 +10,13 @@ public class CurriculumController : Controller
         var curriculum = new CurriculumModel
         {
             Name = "Murilo Barberini Dias",
-            Title = "Software Developer",
+            Title = "Desenvolvedor de software",
             Skills = new List<string> {},
             Experiences = new List<Experience>
             {
                 new Experience
                 {
-                    Position = "Estagiário de QA",
+                    Position = "Estagiário",
                     Company = "Mutant",
                     DurationBegin = "10/2023",
                     DurationEnd = "Até o momento",
@@ -41,6 +41,13 @@ public class CurriculumController : Controller
                     Institution = "Universidade São Judas Tadeu",
                     DurationBegin = "02/2022",
                     DurationEnd = "12/2026"
+                },
+                new Education
+                {
+                    Course = "Psicologia",
+                    Institution = "Universidade Metodista de São Paulo",
+                    DurationBegin = "08/2015",
+                    DurationEnd = "07/2020"
                 }
             },
             Project = new List<Projects>()
