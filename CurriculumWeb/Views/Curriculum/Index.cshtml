@@ -69,12 +69,10 @@
                         </ul>
                     </div>
                 </div>
-                <p class="py-3">
+                <p class="py-3" style="text-align:justify">
                     Sou estudante de Ciência da Computação com foco no desenvolvimento web e de softwares, como também,
                     no aperfeiçoamento da qualidade. Possuo experiência com desenvolvimento de aplicações web e garantia
-                    da qualidade em robôs de atendimento como URA, BOT e Webchat.
-
-                    Me considero proativo, persistente e consistente no aprendizado de novas tecnologias e ferramentas,
+                    da qualidade em robôs de atendimento como URA, BOT e Webchat. Sou proativo, persistente e consistente no aprendizado de novas tecnologias e ferramentas,
                     sempre disposto a enfrentar novos desafios!
                 </p>
             </div>
@@ -126,7 +124,7 @@
                             <h4>@experience.Position</h4>
                             <h5>@experience.DurationBegin - @experience.DurationEnd</h5>
                             <p><em>@experience.Location</em></p>
-                            @experience.Description
+                            <p>@experience.Description</p>
                         </div>
                     }
                 </div>
@@ -135,20 +133,23 @@
 
         </div>
 
-        <div class="container section-title mt-5 aos-init aos-animate" data-aos="fade-up">
-            <span class="description-title">Projetos</span>
-            <h2>Projetos</h2>
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            @foreach (var projects in Model.Project)
-            {
-                <div class="resume-item">
-                    <h4>@projects.Title</h4>
-                    <h5>@projects.DurationBegin - @projects.DurationEnd</h5>
-                    <p>@projects.Description</p>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="container section-title mt-5 aos-init aos-animate" data-aos="fade-up">
+                    <span class="description-title">Projetos</span>
+                    <h2>Projetos</h2>
                 </div>
-            }
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    @foreach (var projects in Model.Project)
+                    {
+                        <div class="resume-item">
+                            <h4>Projeto: @projects.Title</h4>
+                            <p class="project-description">@projects.Description</p>
+                        </div>
+                    }
+                </div>
+            </div>
         </div>
 
     </section>

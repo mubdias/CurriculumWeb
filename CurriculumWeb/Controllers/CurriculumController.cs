@@ -30,7 +30,7 @@ public class CurriculumController : Controller
                     DurationBegin = "08/2022",
                     DurationEnd = "08/2023",
                     Location = "HOME OFFICE",
-                    Description = "Fui responsável por participar da implementação e manutenção de projetos e por realizar testes funcionais, exploratórios, de usabilidade e API. Nesta função eu atuei utilizando Javascript, Node.js, MongoDB, Docker, Heroku."
+                    Description = "Fui responsável por participar da implementação e manutenção de projetos e por realizar testes funcionais, exploratórios, de usabilidade e API. Nesta função eu atuei utilizando Javascript, Node.js, MongoDB."
                 }
             },
             Educations = new List<Education>
@@ -54,11 +54,15 @@ public class CurriculumController : Controller
             {
                 new Projects
                 {
-                    Title = "Projeto A",
-                    DurationBegin = "01/2023",
-                    DurationEnd = "06/2023",
-                    Description = "Descrição do Projeto A"
+                    Title = "NeoMutants",
+                    Description = "Neste projeto fui responsável por desenvolver uma automação com o objetivo de buscar dados de uma tabela no Notion utilizando uma API e enviar uma mensagem no Discord utilizando os dados obtidos por meio de Webhooks. Utilizei as seguintes tecnologias: Selenium, Visual Studio, .NET e Postman."
+                },                
+                new Projects
+                {
+                    Title = "Currículo Online",
+                    Description = "Neste projeto o intuítuo foi desenvolver meu currículo profissional em uma página web utilizando ASP.NET Core com Blazor, Bootstrap e Javascript."
                 }
+
             }
         };
 

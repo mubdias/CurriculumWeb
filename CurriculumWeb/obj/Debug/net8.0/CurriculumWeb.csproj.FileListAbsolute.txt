@@ -21,9 +21,7 @@ C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\staticwebassets\msbu
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.CurriculumWeb.props
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.CurriculumWeb.props
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\scopedcss\bundle\CurriculumWeb.styles.css
-C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\scopedcss\projectbundle\CurriculumWeb.bundle.scp.css
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\CurriculumWeb.dll
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\refint\CurriculumWeb.dll
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\CurriculumWeb.pdb
@@ -31,3 +29,5 @@ C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\CurriculumWeb.genrun
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\ref\CurriculumWeb.dll
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\bin\Debug\net8.0\package-lock.json
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\bin\Debug\net8.0\package.json
+C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\scopedcss\projectbundle\CurriculumWeb.bundle.scp.css
