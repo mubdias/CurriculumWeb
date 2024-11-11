@@ -29,3 +29,5 @@ C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\refint\CurriculumWeb
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\CurriculumWeb.pdb
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\CurriculumWeb.genruntimeconfig.cache
 C:\Users\Muril\CurriculumWeb\CurriculumWeb\obj\Debug\net8.0\ref\CurriculumWeb.dll
+C:\Users\Muril\CurriculumWeb\CurriculumWeb\bin\Debug\net8.0\package-lock.json
+C:\Users\Muril\CurriculumWeb\CurriculumWeb\bin\Debug\net8.0\package.json
