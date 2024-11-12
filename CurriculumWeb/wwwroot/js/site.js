@@ -16,18 +16,6 @@
     window.addEventListener('load', toggleScrolled);
 
     /**
-     * Mobile nav toggle
-     */
-    const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-
-    function mobileNavToogle() {
-        document.querySelector('body').classList.toggle('mobile-nav-active');
-        mobileNavToggleBtn.classList.toggle('bi-list');
-        mobileNavToggleBtn.classList.toggle('bi-x');
-    }
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-
-    /**
      * Hide mobile nav on same-page/hash links
      */
     document.querySelectorAll('#navmenu a').forEach(navmenu => {
@@ -40,25 +28,20 @@
     });
 
     /**
-     * Toggle mobile nav dropdowns
-     */
-    document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-        navmenu.addEventListener('click', function (e) {
-            e.preventDefault();
-            this.parentNode.classList.toggle('active');
-            this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-            e.stopImmediatePropagation();
-        });
-    });
-
-    /**
      * Scroll top button
      */
     let scrollTop = document.querySelector('.scroll-top');
 
     function toggleScrollTop() {
         if (scrollTop) {
-            window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const footer = document.querySelector('footer');
+            const footerTop = footer ? footer.offsetTop : documentHeight;
+
+            window.scrollY >= windowHeight || window.scrollY + windowHeight >= footerTop ?
+                scrollTop.classList.add('active') :
+                scrollTop.classList.remove('active');
         }
     }
     scrollTop.addEventListener('click', (e) => {
@@ -103,46 +86,6 @@
     }
 
     window.addEventListener("load", initSwiper);
-
-    /**
-     * Initiate glightbox
-     */
-    const glightbox = GLightbox({
-        selector: '.glightbox'
-    });
-
-    /**
-     * Init isotope layout and filters
-     */
-    document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
-        let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-        let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-        let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
-
-        let initIsotope;
-        imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
-            initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-                itemSelector: '.isotope-item',
-                layoutMode: layout,
-                filter: filter,
-                sortBy: sort
-            });
-        });
-
-        isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
-            filters.addEventListener('click', function () {
-                isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-                this.classList.add('filter-active');
-                initIsotope.arrange({
-                    filter: this.getAttribute('data-filter')
-                });
-                if (typeof aosInit === 'function') {
-                    aosInit();
-                }
-            }, false);
-        });
-
-    });
 
     /**
      * Correct scrolling position upon page load for URLs containing hash links.
