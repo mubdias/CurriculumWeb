@@ -60,7 +60,7 @@ public class CurriculumController : Controller
                 new Projects
                 {
                     Title = "Currículo Online",
-                    Description = "Neste projeto o intuítuo foi desenvolver meu currículo profissional em uma página web utilizando ASP.NET, Bootstrap e Javascript."
+                    Description = "Neste projeto o intuítuo foi desenvolver meu currículo profissional em uma página web utilizando ASP.NET, Bootstrap, Javascript e Azure."
                 }
 
             }
