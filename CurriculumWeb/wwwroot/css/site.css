@@ -491,7 +491,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 60px;
@@ -714,14 +713,14 @@ section,
   padding-left: 0rem;
 }
 
-.contact .info-item {
-    border-left-color: #6c757d;
-    border-left-style: groove;
-    border-left-width: thin;
+@media (min-width: 992px) {
+  .contact .info-item-borders {
+    border-right: 1px solid; 
+    border-color: rgba(0, 0, 0, 0.15);
+  }
 }
 
 .contact .info-item i {
-  font-size: 20px;
   color: var(--accent-color);
   font-size: 36px;
   display: flex;
