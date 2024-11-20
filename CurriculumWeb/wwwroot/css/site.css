@@ -1,22 +1,20 @@
 
-/* Fonts */
+
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Domine",  sans-serif;
   --nav-font: "Quicksand",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #3b434a; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ffbb27; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #000000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff;
+  --default-color: #444444;
+  --heading-color: #3b434a;
+  --accent-color: #ffbb27;
+  --surface-color: #ffffff;
+  --contrast-color: #000000;
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #ffffff; 
   --nav-hover-color: #ffbb27; 
@@ -25,8 +23,6 @@
   --nav-dropdown-color: #444444;
   --nav-dropdown-hover-color: #ffbb27;
 }
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
   --background-color: #f9f9f9;
@@ -41,14 +37,10 @@
   --contrast-color: #ffffff;
 }
 
-/* Smooth scroll */
 :root {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -76,70 +68,13 @@ h6 {
   font-family: var(--heading-font);
 }
 
-
-
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/*--------------------------------------------------------------
-# Global Header
---------------------------------------------------------------*/
 .header {
   --background-color: rgba(0, 0, 0, 0);
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 10px 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -199,16 +134,11 @@ h6 {
   padding: 12px 0;
 }
 
-/* Global Header on Scroll
-------------------------------*/
 .scrolled .header {
   --background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.5);
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Navmenu - Desktop */
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -258,65 +188,8 @@ h6 {
   .navmenu .active:focus {
     color: var(--nav-hover-color);
   }
-
-  .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .navmenu .dropdown ul li {
-    min-width: 200px;
-  }
-
-  .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    color: var(--nav-dropdown-color);
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
-  }
 }
 
-/* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
@@ -331,7 +204,6 @@ h6 {
     padding: 0;
     z-index: 9997;
   }
-
   .navmenu ul {
     display: none;
     list-style: none;
@@ -346,7 +218,6 @@ h6 {
     z-index: 9998;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
-
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
@@ -395,39 +266,8 @@ h6 {
     transform: rotate(180deg);
   }
 
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
-  }
-
-  .mobile-nav-active {
+  .mobile-cnav-active {
     overflow: hidden;
-  }
-
-  .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
-    position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
-    z-index: 9999;
   }
 
   .mobile-nav-active .navmenu {
@@ -437,15 +277,42 @@ h6 {
     background: rgba(33, 37, 41, 0.8);
     transition: 0.3s;
   }
-
   .mobile-nav-active .navmenu>ul {
-    display: block;
+  display: block;
   }
 }
 
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn.btn-primary:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.row .box-btn {
+  margin-left: 0%;
+  width: 6rem;
+}
+
+.row .box-btn button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: none;
+}
+
+.row .box-btn button span {
+  padding-left: 5%;
+}
+
+.wppbtn {
+  	background-color: green;
+}
+
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -505,9 +372,6 @@ h6 {
   padding-top: 5px;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
 #preloader {
   position: fixed;
   inset: 0;
@@ -540,9 +404,6 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -555,6 +416,7 @@ h6 {
   height: 44px;
   border-radius: 50px;
   transition: all 0.4s;
+  box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.5);
 }
 
 .scroll-top i {
@@ -574,18 +436,12 @@ h6 {
   bottom: 15px;
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 }
 
-/*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
---------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -625,9 +481,6 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
 
-/*--------------------------------------------------------------
-# Global Sections
---------------------------------------------------------------*/
 section,
 .section {
   color: var(--default-color);
@@ -645,9 +498,6 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Global Section Titles
---------------------------------------------------------------*/
 .section-title {
   text-align: center;
   padding: 30px 0;
@@ -695,9 +545,6 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Home Section
---------------------------------------------------------------*/
 .home {
   width: 100%;
   min-height: 100vh;
@@ -779,9 +626,6 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
@@ -809,9 +653,6 @@ section,
   line-height: 0;
 }
 
-/*--------------------------------------------------------------
-# Resume Section
---------------------------------------------------------------*/
 .resume .resume-title {
   color: var(--heading-color);
   font-size: 26px;
@@ -873,9 +714,12 @@ section,
   padding-left: 0rem;
 }
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
+.contact .info-item {
+    border-left-color: #6c757d;
+    border-left-style: groove;
+    border-left-width: thin;
+}
+
 .contact .info-item i {
   font-size: 20px;
   color: var(--accent-color);
@@ -885,6 +729,14 @@ section,
   align-items: center;
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
+}
+
+.contact .info-item .bi-at {
+  font-size: 45px;
+}
+
+.contact .info-item .email {
+  margin-top: 12px;
 }
 
 .contact .info-item h3 {
@@ -897,60 +749,4 @@ section,
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
-}
-
-@media (min-width: 992px) {
-  .contact .info-item.info-item-borders {
-    border-left: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-    border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  }
-}
-
-.contact .php-email-form {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  margin-top: 30px;
-}
-
-@media (max-width: 575px) {
-  .contact .php-email-form {
-    padding: 20px;
-  }
-}
-
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
